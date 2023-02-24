@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #1b9cfc;
+  --text-color: #020102;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo-title span {
+  color: var(--main-color);
+}
+
+.pfp {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--main-color);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+nav {
+  position: fixed;
+  border-bottom: 2px solid #eee;
+  width: 100%;
+  background: #fff;
+  padding: 0.7rem 0;
+  z-index: 10;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .right-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+article {
+  position: relative;
+  top: 5.5rem;
+}
+
+article .container {
+  display: grid;
+  grid-template-columns: 27vh auto 20vw;
+  column-gap: 2rem;
+  position: relative;
+}
+
+.sidebar {
+  height: max-content;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.sidebar .nav-item span i {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  position: relative;
+}
+
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  cursor: pointer;
+  translate: all 0.3s ease;
+  position: relative;
+  color: var(--text-color);
+}
+
+.sidebar .nav-item:hover {
+  background: #eee;
+  border-radius: 2rem;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.sidebar h3 {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.sidebar .active {
+  background: #fff;
+}
+
+.sidebar .active span i,
+.sidebar .active h3 {
+  color: var(--main-color);
+}
+
+.post-btn {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.profile .dp {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid;
+  border-color: white;
+  position: absolute;
+  top: 5.5rem;
+  left: 16.5rem;
+}
+
+.profile .backrect {
+  width: 700px;
+  height: 150px;
+  border-radius: 0;
+  border: none;
+  position: static;
+  z-index: -1;
+}
+
+.vertical-spacer {
+  height: 4rem;
+}
+
+.profile .ProfNames {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.profile p {
+  color: rgb(108, 108, 108);
+}
+
+.profile .ProfNames .n1 {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.profile .ProfNames .Follow {
+  font-size: 14px;
+}
+
+.ProfNames h3:last-child {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.posts-container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, auto);
+  place-content: center;
+  margin-bottom: 1rem;
+}
+
+.posts-container .post img {
+  border-radius: 1rem;
+}
+
+.topics {
+  background: #eee;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.search {
+  background: #eee;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.search input {
+  background: transparent;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  width: 80%;
+}
+
+.follow h2 {
+  margin-bottom: 1rem;
+}
+
+.creator {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.creator:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.creator h3 {
+  font-size: 0.9rem;
+}
+
+.creator p {
+  font-size: 0.7rem;
+  color: rgba(108, 108, 108);
+}
+
+.follow-btn {
+  font-size: 0.7rem;
+  padding: 0 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* Laptops and Large Tablets Responsiveness */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+
+  nav .right-nav {
+    gap: 0.5rem;
+  }
+
+  .profile .backrect {
+    width: 100%;
+  }
+
+  article .container {
+    grid-template-columns: 5rem auto 30vw;
+    gap: 1rem;
+  }
+
+  .sidebar h3 {
+    display: none;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+}
+
+/* Small Tablets and Phones Responsiveness */
+
+@media screen and (max-width: 1000px) {
+  .search {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  article .container {
+    grid-template-columns: 0 auto 0;
+  }
+
+  .profile .dp {
+    top: 10rem;
+    left: 2.5rem;
+  }
+
+  .profile {
+    margin-bottom: 6rem;
+  }
+
+  .sidebar .nav-item span i {
+    margin: 1.5rem;
+  }
+
+  .sidebar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid #eee;
+    width: 100%;
+    background: #fff;
+    padding: 0.7rem 0;
+    z-index: 10;
+  }
+
+  .container .follow {
+    display: none;
+  }
+}

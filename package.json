@@ -1,0 +1,22 @@
+{
+  "name": "pro-connect",
+  "version": "1.0.0",
+  "description": "Business themed social media application for Business Professionals of America, Web Application Development Team competition 2022-2023",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon db"
+  },
+  "author": "Aadit Krishna",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^3.2.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^3.7.2",
+    "nodemon": "^2.0.20"
+  }
+}

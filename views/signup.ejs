@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup | ProConnect</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="/signup" method="post">
+        <h1 class="form-title">Let's create an account</h1>
+        <br />
+        <p class="form-desc">
+          ProConnect is a business-themed social media platform that empowers
+          users to monetize their online presence and grow their brand by
+          connecting directly with other business professionals.
+        </p>
+        <div class="form">
+          <div class="field">
+            <label for="first-name">First Name</label>
+            <input type="text" name="firstname" />
+          </div>
+          <div class="field">
+            <label for="last-name">Last Name</label>
+            <input type="text" name="lastname" />
+          </div>
+          <div class="field">
+            <label for="gender">Gender</label>
+            <input type="text" name="gender" id="gender" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" name="password" value="" />
+          </div>
+          <div class="field">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" name="confirm-password" value="" />
+          </div>
+        </div>
+        <div class="message">
+          <p>
+            By continuing you agree to the ProConnect
+            <a>terms of service </a>and <a>privacy policy</a>
+          </p>
+        </div>
+        <div class="btn-register">
+          <button type="submit">Continue</button>
+          <p>Already have an account? <a href="/login">Sign in</a></p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const passwords = document.querySelectorAll('input[type="password"]');
+      const password1 = passwords[0],
+        password2 = passwords[1];
+      const email = document.querySelector('input[name="email"]');
+
+      email.addEventListener("keyup", () => {
+        if (
+          !(email.value.includes("@") && email.value.includes(".")) ||
+          email.value.length < 3
+        ) {
+          email.style.borderColor = "red";
+        } else email.style.borderColor = "#e3e5e885";
+      });
+
+      password1.addEventListener("keyup", () => {
+        if (password1.value !== password2.value) {
+          password1.style.borderColor = "red";
+          password2.style.borderColor = "red";
+        } else {
+          password1.style.borderColor = "#e3e5e885";
+          password2.style.borderColor = "#e3e5e885";
+        }
+      });
+
+      password2.addEventListener("keyup", () => {
+        if (password1.value !== password2.value) {
+          password1.style.borderColor = "red";
+          password2.style.borderColor = "red";
+        } else {
+          password1.style.borderColor = "#e3e5e885";
+          password2.style.borderColor = "#e3e5e885";
+        }
+      });
+    </script>
+  </body>
+</html>

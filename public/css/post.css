@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #1b9cfc;
+  --text-color: #020102;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-link {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 2rem;
+  left: 2rem;
+  color: var(--main-color);
+}
+
+.back-link:hover {
+  color: #006cbe;
+}
+
+.post {
+  margin: 1rem 0;
+  width: 30%;
+}
+
+.post-info {
+  display: flex;
+  align-items: center;
+}
+
+.feed .posts .post {
+  background: #eee;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.info small {
+  color: rgb(108, 108, 108);
+  text-transform: uppercase;
+}
+
+.user {
+  display: flex;
+  gap: 1rem;
+}
+
+.post-text {
+  margin: 1rem 0;
+}
+
+.photo {
+  border-radius: 2rem;
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+.action-button {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  width: 50%;
+}
+
+.interactions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.interactions {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.interactions span p {
+  display: inline;
+  margin-left: 0.5rem;
+}
+
+.interactions span i {
+  cursor: pointer;
+}
+
+.liked {
+  color: var(--main-color);
+}
+
+.liked i {
+  animation: anim 0.5s ease-in-out;
+  -webkit-animation: anim 0.5s ease-in-out;
+}
+
+@keyframes anim {
+  100% {
+    transform: rotate(-15deg) scale(1.3);
+    -webkit-transform: rotate(-15deg) scale(1.3);
+    -moz-transform: rotate(-15deg) scale(1.3);
+    -ms-transform: rotate(-15deg) scale(1.3);
+    -o-transform: rotate(-15deg) scale(1.3);
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+  }
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+}
+
+.likes span {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  margin-left: -0.5rem;
+}
+
+.likes span:first-child {
+  margin: 0;
+}
+
+.likes p {
+  margin-left: 0.5rem;
+}
+
+.comment {
+  margin: 0.5rem 0;
+}
+
+.caption {
+  margin-top: 0.5rem;
+}
+
+.more-comments {
+  color: rgb(108, 108, 108);
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.post-date {
+  margin-top: 0.5rem;
+  color: rgb(108, 108, 108);
+  text-transform: uppercase;
+}
+
+.pfp {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}

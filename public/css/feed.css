@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #1b9cfc;
+  --text-color: #020102;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo-title span {
+  color: var(--main-color);
+}
+
+.pfp {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--main-color);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+nav {
+  position: fixed;
+  border-bottom: 2px solid #eee;
+  width: 100%;
+  background: #fff;
+  padding: 0.7rem 0;
+  z-index: 10;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .right-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+article {
+  position: relative;
+  top: 5.5rem;
+}
+
+article .container {
+  display: grid;
+  grid-template-columns: 27vh auto 20vw;
+  column-gap: 2rem;
+  position: relative;
+}
+
+.left {
+  height: max-content;
+  position: sticky;
+  /* border-right: 2px solid #eee; */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.sidebar .nav-item span i {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  position: relative;
+}
+
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  cursor: pointer;
+  translate: all 0.3s ease;
+  position: relative;
+  color: var(--text-color);
+}
+
+.sidebar .nav-item:hover {
+  background: #eee;
+  border-radius: 2rem;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.sidebar h3 {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.sidebar .active {
+  background: #fff;
+}
+
+.sidebar .active span i,
+.sidebar .active h3 {
+  color: var(--main-color);
+}
+
+.post-btn {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.feed h2 {
+  margin-bottom: 1rem;
+}
+
+.feed .create-post {
+  width: 100%;
+  height: max-content;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.feed .create-post textarea {
+  width: 100%;
+  background: transparent;
+  margin-top: 2rem;
+  padding-bottom: 5rem;
+  resize: none;
+  color: var(--text-color);
+}
+
+.post-info {
+  display: flex;
+  align-items: center;
+}
+
+.feed .posts .post {
+  background: #eee;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.info small {
+  color: rgb(108, 108, 108);
+  text-transform: uppercase;
+}
+
+.user {
+  display: flex;
+  gap: 1rem;
+}
+
+.post-text {
+  margin: 1rem 0;
+}
+
+.photo {
+  border-radius: 2rem;
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+.action-button {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  width: 50%;
+}
+
+.interactions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.interactions {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.interactions span p {
+  display: inline;
+  margin-left: 0.5rem;
+}
+
+.interactions span i {
+  cursor: pointer;
+}
+
+.liked {
+  color: var(--main-color);
+}
+
+.liked i {
+  animation: anim 0.5s ease-in-out;
+  -webkit-animation: anim 0.5s ease-in-out;
+}
+
+@keyframes anim {
+  100% {
+    transform: rotate(-15deg) scale(1.3);
+    -webkit-transform: rotate(-15deg) scale(1.3);
+    -moz-transform: rotate(-15deg) scale(1.3);
+    -ms-transform: rotate(-15deg) scale(1.3);
+    -o-transform: rotate(-15deg) scale(1.3);
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+  }
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+}
+
+.likes span {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+  margin-left: -0.5rem;
+}
+
+.likes span:first-child {
+  margin: 0;
+}
+
+.likes p {
+  margin-left: 0.5rem;
+}
+
+.comment {
+  margin: 0.5rem 0;
+}
+
+.caption {
+  margin-top: 0.5rem;
+}
+
+.more-comments {
+  color: rgb(108, 108, 108);
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.post-date {
+  margin-top: 0.5rem;
+  color: rgb(108, 108, 108);
+  text-transform: uppercase;
+}
+
+.who-to-follow {
+  background: #eee;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.search {
+  background: #eee;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.search input {
+  background: transparent;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  width: 80%;
+}
+
+.follow h2 {
+  margin-bottom: 1rem;
+}
+
+.creator {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.creator:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.creator h3 {
+  font-size: 0.9rem;
+}
+
+.creator p {
+  font-size: 0.7rem;
+  color: rgba(108, 108, 108);
+}
+
+.follow-btn {
+  font-size: 0.7rem;
+  padding: 0 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* Laptops and Large Tablets Responsiveness */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+
+  article .container {
+    grid-template-columns: 5rem auto 30vw;
+    gap: 1rem;
+  }
+
+  .left {
+    width: 5rem;
+    z-index: 5;
+  }
+
+  article .container .left .profile,
+  .sidebar h3 {
+    display: none;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+}
+
+/* Small Tablets and Phones Responsiveness */
+
+@media screen and (max-width: 1000px) {
+  .search {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  article .container {
+    grid-template-columns: 0 auto 0;
+  }
+
+  .sidebar .nav-item span i {
+    margin: 1.5rem;
+  }
+
+  .left {
+    height: 0;
+  }
+
+  .sidebar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid #eee;
+    width: 100%;
+    background: #fff;
+    padding: 0.7rem 0;
+    z-index: 10;
+  }
+
+  .container .follow {
+    display: none;
+  }
+}

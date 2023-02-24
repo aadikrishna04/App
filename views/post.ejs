@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="/css/post.css" />
+    <title>Post</title>
+  </head>
+  <body>
+    <a class="back-link" href="/feed">Back to Feed</a>
+    <div class="post">
+      <div class="head">
+        <div class="user">
+          <div class="pfp">
+            <img src="/img/pfp.jpg" />
+          </div>
+          <div class="info">
+            <h3>Aadit Krishna</h3>
+            <small
+              ><%= post.date.getMonth() + 1%>/<%= post.date.getDate()%>/<%=
+              post.date.getFullYear()%></small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="post-text"><%= post.body %></div>
+      <div class="photo"><img src="/img/pfp.jpg" /></div>
+      <div class="action-button">
+        <div class="interactions">
+          <span
+            ><i class="bx bx-heart"></i>
+            <p>3.2K</p></span
+          >
+          <span
+            ><i class="bx bx-message-rounded-dots"></i>
+            <p>326</p></span
+          >
+          <span
+            ><i class="bx bx-share"></i>
+            <p>208</p></span
+          >
+        </div>
+      </div>
+      <div class="likes">
+        <span><img src="/img/pfp.jpg" /></span>
+        <span><img src="/img/pfp.jpg" /></span>
+        <span><img src="/img/pfp.jpg" /></span>
+        <p>
+          Liked by <strong>Juney Krishnan</strong> and
+          <strong>153 others</strong>
+        </p>
+      </div>
+      <div class="caption">
+        <p><strong>Aadit Krishna</strong> Hello! I am Juney!</p>
+      </div>
+      <div class="more-comments">View all 18 comments</div>
+      <div class="comment">
+        <p>
+          <strong>LGBTQ Community</strong> We accept your application!
+          <span class="hash-tag">#LGBTQ</span>
+        </p>
+      </div>
+      <div class="post-date">2 days ago</div>
+    </div>
+  </body>
+</html>

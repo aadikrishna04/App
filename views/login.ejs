@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/signin.css" />
+    <title>Signin | ProConnect</title>
+  </head>
+  <body>
+    <article class="container">
+      <section class="left-page">
+        <img src="/img/login_picture.svg" />
+      </section>
+      <section class="right-page">
+        <form action="/login" method="post">
+          <h1>Welcome to ProConnect</h1>
+          <br />
+          <p>Don't have an account? <a href="/signup">Click here</a></p>
+          <div class="form">
+            <div class="field">
+              <label for="fullname">Full Name</label>
+              <input type="text" name="fullname" id="fullname" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" name="password" />
+            </div>
+          </div>
+          <div class="btn-register">
+            <button type="submit">Continue</button>
+            <p>Forgot your password? <a href="#">Click here</a></p>
+          </div>
+        </form>
+      </section>
+    </article>
+  </body>
+</html>

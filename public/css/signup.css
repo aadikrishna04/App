@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Silkscreen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500&family=Silkscreen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  background: rgb(16, 17, 22);
+}
+
+:root {
+  --color: #3e71d5;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 650px;
+  padding: 20px;
+  margin: 0 28px;
+  /* box-shadow: 0 15px 20px #00000033; */
+}
+
+.form-title {
+  color: white;
+  font-family: "Poppins";
+}
+
+p {
+  font-size: 14px;
+  color: rgba(211, 211, 211, 0.575);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-bottom: 15px;
+}
+
+/* #email {
+ width: 100%;
+} */
+
+.field:nth-child(2n) {
+  justify-content: end;
+}
+
+.field label,
+.gender {
+  width: 95%;
+  color: #e3e5e885;
+  font-weight: semi-bold;
+  margin: 5px 0;
+}
+
+.gender {
+  font-size: 16px;
+}
+
+.field input {
+  height: 40px;
+  width: 95%;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #e3e5e885;
+  outline: none;
+  color: #fff;
+  transition: border-color 200ms;
+}
+
+.field input:is(:focus, :valid) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gender-btns {
+  color: gray;
+}
+
+.gender-btns label {
+  padding: 0 20px 0 5px;
+  font-size: 14px;
+}
+
+.gender-btns label,
+.gender-btns input {
+  cursor: pointer;
+}
+
+.message p {
+  font-size: 14px;
+  font-size: italic;
+  color: gray;
+  margin: 5px 0;
+  padding: 10px 0;
+}
+
+.message a {
+  text-decoration: none;
+}
+
+.btn-register {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 15px 0;
+}
+
+.btn-register a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+.btn-register button {
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+  cursor: pointer;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+button:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+button:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
+
+@media (max-width: 600px) {
+  .container {
+    min-width: 280px;
+  }
+
+  .form {
+    max-height: 380px;
+    overflow: auto;
+  }
+
+  .field {
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .field:nth-child(2n) {
+    justify-content: space-between;
+  }
+
+  .gender-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+}

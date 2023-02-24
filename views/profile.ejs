@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="/css/profile.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h1 class="logo-title"><span>Pro</span>Connect</h1>
+        <div class="right-nav">
+          <div class="pfp">
+            <img
+              src="https://st4.depositphotos.com/11634452/41441/v/600/depositphotos_414416674-stock-illustration-picture-profile-icon-male-icon.jpg"
+            />
+          </div>
+          <a class="username">
+            <div class="username">
+              <h4>John Doe</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <article>
+      <div class="container">
+        <div class="sidebar">
+          <ul>
+            <li>
+              <a href="/feed" class="nav-item">
+                <span><i class="bx bx-home"></i></span>
+                <h3>Home</h3>
+              </a>
+            </li>
+            <li>
+              <a href="/profile" class="nav-item active">
+                <span><i class="bx bx-user"></i></span>
+                <h3>Profile</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-item">
+                <span><i class="bx bx-log-out"></i></span>
+                <h3>Log Out</h3>
+              </a>
+            </li>
+          </ul>
+          <label class="btn post-btn nav-btn" for="create-post">Post</label>
+        </div>
+        <div class="profile">
+          <div class="search hide">
+            <i class="bx bx-search"></i>
+            <input type="search" id="search" placeholder="Search ProConnect" />
+          </div>
+          <img
+            class="dp"
+            src="https://e7.pngegg.com/pngimages/753/432/png-clipart-user-profile-2018-in-sight-user-conference-expo-business-default-business-angle-service-thumbnail.png"
+            alt="profile_picture"
+          />
+          <img
+            class="backrect"
+            src="https://www.xmple.com/wallpaper/gradient-linear-blue-grey-2560x1800-c2-d3d3d3-87cefa-a-60-f-14.svg"
+            alt="profile_picture"
+          />
+          <div class="vertical-spacer"></div>
+          <div class="ProfNames">
+            <h3>John Doe</h3>
+            <p>@johndoe</p>
+            <ins class="n1">0</ins>
+            <ins class="Follow">followers</ins>
+            <ins class="n1">0</ins>
+            <ins class="Follow">following</ins>
+            <h3>Posts</h3>
+          </div>
+          <div class="posts-container">
+            <div class="item">
+              <div class="input-controller">
+                <textarea disabled>this is an example post</textarea>
+                <div class="edit-controller">
+                  <i class="fa-solid fa-trash deleteBtn"></i>
+                  <i class="fa-solid fa-pen-to-square editBtn"></i>
+                </div>
+              </div>
+              <div class="update-controller">
+                <button class="saveBtn">Save</button>
+                <button class="cancelBtn">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="follow">
+          <div class="search">
+            <i class="bx bx-search"></i>
+            <input type="search" id="search" placeholder="Search ProConnect" />
+          </div>
+        </div>
+      </div>
+    </article>
+    <style>
+      button {
+        height: fit-content;
+        cursor: pointer;
+        color: #04202c;
+        background-color: #c9d1c8;
+      }
+
+      .app {
+        width: 600px;
+        margin: auto;
+        padding-top: 50px;
+        color: white;
+      }
+
+      .input-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 0px 0px 10px 0px;
+      }
+
+      .to-do-input input {
+        width: 250px;
+        font-family: inherit;
+        border: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding: 10px;
+        outline: none;
+      }
+
+      .to-do-input button {
+        color: #5b7065;
+        font-family: inherit;
+        border: none;
+        padding: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .to-do-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .to-do-list i {
+        color: #c9d1c8;
+        cursor: pointer;
+      }
+
+      .to-do-list .fa-pen-to-square {
+        color: #5b7065;
+      }
+
+      .to-do-list button {
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: inherit;
+        border: none;
+      }
+
+      .item {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #eee;
+        border-radius: 10px;
+        padding: 8px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+      }
+
+      .input-controller {
+        display: flex;
+        gap: 10px;
+      }
+
+      .input-controller textarea {
+        width: 100%;
+        outline: none;
+        border: none;
+        resize: none;
+        line-height: 1.4;
+        color: #000;
+        border-radius: 10px;
+        background-color: transparent;
+        font-size: 1.2rem;
+        font-family: inherit;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .edit-controller {
+        display: flex;
+        gap: 5px;
+      }
+
+      .update-controller {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .app {
+          width: 95%;
+          text-align: center;
+        }
+
+        .input-header {
+          flex-direction: column;
+          padding-bottom: 20px;
+        }
+
+        .to-do-input {
+          display: flex;
+        }
+
+        .to-do-input input {
+          width: 300px;
+        }
+      }
+    </style>
+        <script>
+          const itemsArray = localStorage.getItem("items")
+      ? JSON.parse(localStorage.getItem("items"))
+      : [];
+    
+    document.querySelector("#postbtn").addEventListener("click", () => {
+      const item = document.querySelector("#create-post");
+      createItem(item);
+    });
+    
+    document.querySelector("#create-post").addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        const item = document.querySelector("#create-post");
+        createItem(item);
+      }
+    });
+    
+    function displayItems() {
+      let items = "";
+      for (let i = 0; i < itemsArray.length; i++) {
+        items += `<div class="item">
+                    <div class="input-controller">
+                      <textarea disabled>${itemsArray[i]}</textarea>
+                      <div class="edit-controller">
+                        <i class="fa-solid fa-trash deleteBtn"></i>
+                        <i class="fa-solid fa-pen-to-square editBtn"></i>
+                      </div>
+                    </div>
+                    <div class="update-controller">
+                      <button class="saveBtn">Save</button>
+                      <button class="cancelBtn">Cancel</button>
+                    </div>
+                  </div>`;
+      }
+      document.querySelector(".posts").innerHTML = items;
+      activateDeleteListeners();
+      activateEditListeners();
+      activateSaveListeners();
+      activateCancelListeners();
+    }
+    
+    function activateDeleteListeners() {
+      let deleteBtn = document.querySelectorAll(".deleteBtn");
+      deleteBtn.forEach((dB, i) => {
+        dB.addEventListener("click", () => {
+          deleteItem(i);
+        });
+      });
+    }
+    
+    function activateEditListeners() {
+      const editBtn = document.querySelectorAll(".editBtn");
+      const updateController = document.querySelectorAll(".update-controller");
+      const inputs = document.querySelectorAll(".input-controller textarea");
+      editBtn.forEach((eB, i) => {
+        eB.addEventListener("click", () => {
+          updateController[i].style.display = "block";
+          inputs[i].disabled = false;
+        });
+      });
+    }
+    
+    function activateSaveListeners() {
+      const saveBtn = document.querySelectorAll(".saveBtn");
+      const inputs = document.querySelectorAll(".input-controller textarea");
+      saveBtn.forEach((sB, i) => {
+        sB.addEventListener("click", () => {
+          updateItem(inputs[i].value, i);
+        });
+      });
+    }
+    
+    function activateCancelListeners() {
+      const cancelBtn = document.querySelectorAll(".cancelBtn");
+      const updateController = document.querySelectorAll(".update-controller");
+      const inputs = document.querySelectorAll(".input-controller textarea");
+      cancelBtn.forEach((cB, i) => {
+        cB.addEventListener("click", () => {
+          updateController[i].style.display = "none";
+          inputs[i].disabled = true;
+          inputs[i].style.border = "none";
+        });
+      });
+    }
+    
+    function createItem(item) {
+      itemsArray.push(item.value);
+      localStorage.setItem("items", JSON.stringify(itemsArray));
+      location.reload();
+    }
+    
+    function deleteItem(i) {
+      itemsArray.splice(i, 1);
+      localStorage.setItem("items", JSON.stringify(itemsArray));
+      location.reload();
+    }
+    function updateItem(text, i) {
+      itemsArray[i] = text;
+      localStorage.setItem("items", JSON.stringify(itemsArray));
+      location.reload();
+    }
+    
+    window.onload = function () {
+      displayItems();
+    };
+        </script>
+  </body>
+</html>
